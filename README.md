@@ -58,6 +58,7 @@ $ git clone https://github.com/IBM/hdp-search-spark-recommender.git
 ### 2. Setup HDP platform
 
 *Coming soon*
+download the sanbox from the following link ;
 
 ### 3. Set up HDP Search
 
