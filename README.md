@@ -25,7 +25,7 @@ When you have completed this Code Pattern, you will understand how to:
 ## Included components
 * [IBM Data Science Experience Local](https://content-dsxlocal.mybluemix.net/docs/content/local/overview.html): An out-of-the-box on premises solution for data scientists and data engineers. It offers a suite of data science tools that integrate with RStudio, Spark, Jupyter, and Zeppelin notebook technologies.
 * [Apache Spark](http://spark.apache.org/): An open-source, fast and general-purpose cluster computing system.
-* [Hortonworks Data Platform (HDP)](https://hortonworks.com/products/data-platforms/hdp/) : HDP is an Apache Hadoop distribution based on a centralized architecture (YARN).
+* [Hortonworks Data Platform (HDP)](https://hortonworks.com/products/data-platforms/hdp/): HDP is an Apache Hadoop distribution based on a centralized architecture (YARN).
 * [HDP Search](https://doc.lucidworks.com/lucidworks-hdpsearch/2.6/index.html): HDP Search provides applications and tools for indexing content from your HDP cluster to Solr.
 * [Jupyter Notebooks](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
 
@@ -61,7 +61,7 @@ $ git clone https://github.com/IBM/hdp-search-spark-recommender.git
 
 ### 3. Set up HDP Search
 
-Install the HDP Search component by following the instructions [instructions](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_solr-search-installation/content/hdp-search30-install-mpack.html). The code pattern currently depends on solr version 6.6.2. The code pattern also assumes that the Solr is started in the cloud mode. After installing the HDP Search(Solr) component, verify that the server is running by following one of the two ways.
+Install the HDP Search component by following the [instructions](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_solr-search-installation/content/hdp-search30-install-mpack.html). The code pattern currently depends on solr version 6.6.2. The code pattern also assumes that the Solr is started in the cloud mode. After installing the HDP Search(Solr) component, verify that the server is running by following one of the two ways.
 
    1. Access the solr admin URL http://solr_host:8983/solr to see the dashboard.
    2. cd <solr_installation_dir>/solr/bin; ./solr status 
@@ -82,7 +82,7 @@ This Code Pattern reads the movie data set and computes the model vectors using 
 
    1. Log in to Ambari 
    2. Select spark2 component
-   3. Choose configuration tab and add the following property keys under "Custom spark2-defaults"
+   3. Choose configuration tab and add the following property keys under `Custom spark2-defaults`
       * `spark.driver.extraClassPath` -> Path to the spark solr connector jar.
         Example: `spark.driver.extraClassPath` -> `/home/user1/spark-solr-3.3.3-shaded.jar`
       * `spark.executor.extraClassPath` -> Path to the spark solr connector jar
@@ -119,7 +119,7 @@ This code pattern relies upon a few python plugins. Some plugins are required to
 | urllib2 | DSX Local and all nodes of HDP cluster |
 | solrcloudpy | DSX Local and all nodes of HDP cluster |
 
-The plugins can be installed using the pip command. Example :
+The plugins can be installed using the pip command. Example:
 
 ```
 $ pip install numpy
@@ -134,7 +134,7 @@ $ pip install numpy
 To run the notebook you will need to start DSX Local. Below are the steps that need to be performed before running the notebook
 the very first time.
    1. Import the notebook into DSX Local from the github location.
-   2. Fill in the values such as solr install location, solr install host name , ssh userid/password, tmdb access key etc.
+   2. Fill in the values such as solr install location, solr install host name, ssh userid/password, tmdb access key etc.
    3. Run the notebook.
 
 ### 9. Run the notebook
